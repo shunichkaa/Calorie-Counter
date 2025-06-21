@@ -12,6 +12,6 @@ function cleanInputString(str) {
 }
 
 function isInvalidInput(str) {
-  const regex = /e/i;
+  const regex = /[0-9]e[0-9]/i;
   return !str || regex.test(str) || isNaN(Number(str));
 }
