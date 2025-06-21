@@ -12,6 +12,6 @@ function cleanInputString(str) {
 }
 
 function isInvalidInput(str) {
-  const regex = /e/;
-  return !str || regex.test(str.toLowerCase()) || isNaN(Number(str));
+  const regex = /e/i;
+  return !str || regex.test(str) || isNaN(Number(str));
 }
