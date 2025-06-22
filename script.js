@@ -30,7 +30,7 @@ function addEntry() {
       id="${entryDropdown.value}-${entryNumber}-calories" 
     />
   `;
-  targetInputContainer.insertAdjacentHTML();
+  targetInputContainer.insertAdjacentHTML("beforeend", HTMLString);
 }
 
 addEntryButton.addEventListener("click", addEntry);
