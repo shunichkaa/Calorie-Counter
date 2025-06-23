@@ -35,17 +35,11 @@ function addEntry() {
 function getCaloriesFromInputs(list) {
   let calories = 0;
 
-  for (const item of list) {
-    const input = item.querySelector('input[type="number"]');
-    if (!input) continue;
-
-    const cleaned = cleanInputString(input.value);
+   for (const item of list) {
+    const currVal = item.value;
+    const cleaned = cleanInputString(currVal);
     if (cleaned === '' || isInvalidInput(cleaned)) continue;
 
-    calories += Number(cleaned);
-  }
-
-  return calories;
 }
 
 addEntryButton.addEventListener("click", addEntry);
